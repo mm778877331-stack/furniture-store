@@ -1,0 +1,974 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FurniShop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family:  Outfit , sans-serif;
+    }body {
+  background: #fff;
+  color: #111;
+  line-height: 1.6;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 30px 20px;
+  color: #fff;
+  background: transparent;
+}
+
+.nav {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav h1 {
+  font-size: 24px;
+}
+
+.nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .nav ul {
+    display: none;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    gap: 10px;
+    width: 180px;
+  }
+
+  .nav ul.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+.hero {
+  background: url(1.jpg) no-repeat center center/cover;
+  padding: 180px 20px 120px;
+  text-align: center;
+  color: #fff;
+}
+
+.hero h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 16px;
+  color: #ddd;
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+.hero button {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: none;
+  padding: 12px 30px;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  background: transparent;
+  padding: 0 20px;
+  margin-top: -60px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  background: #0e5b4c;
+  padding: 30px;
+  gap: 0;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.stat {
+  color: #fff;
+  text-align: center;
+  padding: 15px 10px;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.stat:first-child {
+  border-left: none;
+}
+
+.stat h3 {
+  font-size: 22px;
+}
+
+.stat p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+  align-items: flex-start;
+}
+
+.section img {
+  max-width: 100%;
+  width: 400px;
+  border-radius: 8px;
+}
+
+.section-content {
+  flex: 1;
+  padding: 30px 20px;
+}
+
+.section-content h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.section-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.check {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.check::before {
+  content: "✔";
+  color: green;
+}
+
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <h1>FurniShop</h1>
+      <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+      <ul id="nav-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </header>  <section class="hero">
+    <h2>Creative Home Simpify Your Furniture</h2>
+    <p>Do I have consent to record this meeting gain location, root-and-branch, review, nor game plan who s the go-to</p>
+    <button>Shop Now</button>
+  </section>  <div class="stats-container">
+    <div class="stats">
+      <div class="stat">
+        <h3>7</h3>
+        <p>Year Experience</p>
+      </div>
+      <div class="stat">
+        <h3>2</h3>
+        <p>Opened in the country</p>
+      </div>
+      <div class="stat">
+        <h3>10k+</h3>
+        <p>Furniture sold</p>
+      </div>
+      <div class="stat">
+        <h3>260+</h3>
+        <p>Variant Furniture</p>
+      </div>
+    </div>
+  </div>  <section class="section">
+    <img src="images/m1.jpg" alt="furniture" />
+    <div class="section-content">
+      <h2>We Create Your Home More Aesthetic</h2>
+      <p>Furniture Power is a software as a service for multipurpose business management system</p>
+      <div class="check">
+        <div>
+          <strong>Valuation Services</strong><br/>
+          <span>Sometimes features require a short description. This can be a detailed description.</span>
+        </div>
+      </div>
+      <div class="check">
+        <div>
+          <strong>Development of Furniture Models</strong><br/>
+          <span>Sometimes features require a short description. This can be a detailed description.</span>
+        </div>
+      </div>
+    </div>
+  </section>  <script>
+    function toggleMenu() {
+      document.getElementById( nav-menu ).classList.toggle( active );
+    }
+  </script></body>
+</html>
+
+
+<!-- ############################################# -->
+
+
+<style>
+    body {
+      margin: 0;
+      font-family:  Outfit , sans-serif;
+      background-color: #f4f4f4;
+    }.store-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 20px;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.store-text {
+  flex: 0 0 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.store-text h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.store-text p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.check-all {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: #0e5b4c;
+  cursor: pointer;
+}
+
+.check-all span {
+  margin-left: 8px;
+  font-size: 18px;
+}
+
+.image-slider {
+  flex: 1;
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+}
+
+.image-slider img {
+  height: 300px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  scroll-snap-align: start;
+}
+
+/* Hide scrollbar */
+.image-slider::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .store-section {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .store-text {
+    flex: 0 0 35%;
+  }
+
+  .image-slider {
+    flex: 0 0 60%;
+    padding-left: 10px;
+  }
+  .image-slider img{
+    height: 170px;
+    width: 100px;
+  }
+  .store-text h2{
+    font-size: 18px;
+  }
+  .store-text p{
+    font-size: 14px;
+  }
+  .check-all{
+    font-size: 14px;
+  }
+
+}
+
+  </style>
+</head>
+<body>
+  <section class="store-section">
+    <div class="store-text">
+      <h2>New In Store Now</h2>
+      <p>Get the latest items immediately with promo prices</p>
+      <div class="check-all">
+        Check All <span>&rarr;</span>
+      </div>
+    </div>
+    <div class="image-slider">
+      <img src="images/i1.jpg" alt="img1" />
+      <img src="images/i2.jpg" alt="img2" />
+      <img src="images/i3.jpg" alt="img3" />
+      <img src="images/i4.jpg" alt="img4" />
+      <img src="" alt="img5" />
+    </div>
+  </section>
+</body>
+</html>
+
+
+<!-- ############################################# -->
+<!DOCTYPE html><html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FurniShop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family:  Outfit , sans-serif;
+      }body {
+    background-color: #fff;
+    color: #111;
+    padding: 20px;
+  }
+  
+  .hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+  }
+  
+  .hero-text {
+    flex: 1;
+    min-width: 280px;
+  }
+  
+  .hero-text h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  
+  .hero-text p {
+    font-size: 15px;
+    color: #555;
+  }
+  
+  .hero-image {
+    flex: 1;
+    min-width: 280px;
+  }
+  
+  .hero-image img {
+    max-width: 420px;
+    width: 100%;
+    border-radius: 12px;
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .section-title h2 {
+    font-size: 24px;
+  }
+  
+  .section-title p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
+    gap: 20px;
+  }
+  
+  .product-card {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .product-card img {
+    width: 100%;
+    height: 130px;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+  
+  .product-card h4 {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  
+  .product-card p {
+    font-size: 13px;
+    color: #777;
+  }
+  
+  .product-card span {
+    display: inline-block;
+    background: #0e5b4c;
+    color: #fff;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 16px;
+    margin-top: 5px;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-section {
+      flex-direction: column;
+    }
+  
+    .hero-text, .hero-image {
+      text-align: center;
+    }
+  
+    .hero-text h1 {
+      font-size: 24px;
+    }
+  
+    .product-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+    </style>
+  </head>
+  <body>  <!-- Hero Section -->  <section class="hero-section">
+      <div class="hero-text">
+        <h1>The Best Furniture Manufacturer Of Your Choice</h1>
+        <p>Furniture power is a software as services for multipurpose business management system, especially for them who are running two or more business explore the future. Furniture power is a software as services.</p>
+      </div>
+      <div class="hero-image">
+        <img src="images/image.jpg" alt="Kitchen Image">
+      </div>
+    </section>  <!-- All Products Section -->  <div class="section-title">
+      <h2>All Product</h2>
+      <p>The products we provide only for you as our service are selected from the best products with number 1 quality in the world</p>
+    </div>  <div class="product-grid">
+      <div class="product-card">
+        <img src="images/ima1.jpg" alt="Product">
+        <h4>Ceiling Light</h4>
+        <p>$75.00</p>
+        <span>+</span>
+      </div>
+      <div class="product-card">
+        <img src="images/ima2.jpg" alt="Product">
+        <h4>Wood Chair</h4>
+        <p>$50.00</p>
+        <span>+</span>
+      </div>
+      <div class="product-card">
+        <img src="images/ima3.jpg" alt="Product">
+        <h4>Papper Cupboard</h4>
+        <p>$105.00</p>
+        <span>+</span>
+      </div>
+      <div class="product-card">
+        <img src="images/ima4.jpg" alt="Product">
+        <h4>Spring Bed</h4>
+        <p>$82.00</p>
+        <span>+</span>
+      </div>
+      <div class="product-card">
+        <img src="images/ima5.jpg" alt="Product">
+        <h4>Spring Bed</h4>
+        <p>$82.00</p>
+        <span>+</span>
+      </div>
+      <div class="product-card">
+        <img src="images/ima6.jpg" alt="Product">
+        <h4>Spring Bed</h4>
+        <p>$82.00</p>
+        <span>+</span>
+      </div>    <div class="product-card">
+        <img src="images/ima7.jpg" alt="Product">
+        <h4>Spring Bed</h4>
+        <p>$82.00</p>
+        <span>+</span>
+      </div>    <div class="product-card">
+        <img src="images/ima8.jpg" alt="Product">
+        <h4>Spring Bed</h4>
+        <p>$82.00</p>
+        <span>+</span>
+      </div>
+      <!-- More products can be added below -->
+    </div></body>
+  </html>
+
+
+  <!-- ############################################# -->
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Footer & Review Section</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family:  Outfit , sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #111;
+    }
+
+    .testimonial-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px 20px;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .testimonial-text {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .testimonial-text h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .testimonial-person {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .testimonial-person img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    .testimonial-comment {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .testimonial-img {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .testimonial-img img {
+      width: 90%;
+      max-width: 500px;
+      border-radius: 12px;
+    }
+
+    .subscribe-section {
+      background: url( lamp.jpg ) no-repeat center;
+      background-size: cover;
+      padding: 50px 20px;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .subscribe-section h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .subscribe-section p {
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .subscribe-section input {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+      width: 250px;
+    }
+
+    .subscribe-section button {
+      background: #111;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #20202a;
+      color: #fff;
+      padding: 50px 20px 30px;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .footer-top h4 {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .footer-top ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-top ul li {
+      font-size: 14px;
+      color: #ccc;
+      margin-bottom: 8px;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      border-top: 1px solid #444;
+      padding-top: 20px;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .social-icons a {
+      width: 35px;
+      height: 35px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: #333;
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    @media (max-width: 768px) {
+      .testimonial-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .subscribe-section {
+        align-items: center;
+        text-align: center;
+      }
+
+      .subscribe-section input {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+    /* ########################### */
+
+
+
+    .subscribe-section {
+  background: url( images/lamp.jpg ) no-repeat center center / cover;
+  padding: 100px 20px;
+  color: #fff;
+  position: relative;
+}
+    .subscribe-overlay {
+  /* background-color: rgba(0, 0, 0, 0.4); */
+  padding: 60px 20px;
+  display: flex;
+  justify-content: flex-start;
+  text-align: right;
+  max-width: 1200px;
+  margin: auto;
+  direction: rtl;
+}
+
+.subscribe-text {
+  max-width: 400px;
+  margin-right: auto;
+}
+
+.subscribe-text h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.subscribe-text p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #f0f0f0;
+}
+
+.subscribe-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.subscribe-form input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 250px;
+}
+
+.subscribe-form button {
+  background: #111;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  background-color: #0e5b4c;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-logo h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.footer-social {
+  margin-bottom: 20px;
+}
+
+.footer-social a img {
+  width: 28px;
+  margin: 0 8px;
+  vertical-align: middle;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .subscribe-overlay {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    direction: ltr;
+  }
+
+  .subscribe-text {
+    margin-right: 0;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <!-- Testimonial Section -->
+  <section class="testimonial-section">
+    <div class="testimonial-text">
+      <h2>What People Are Saying About Us</h2>
+      <div class="testimonial-person">
+        <img src="images/MM.png" alt="Josh Smith">
+        <div>
+          <strong>Josh Smith</strong><br>
+          <small>Manager of The New York Times</small>
+        </div>
+      </div>
+      <p class="testimonial-comment">“They are have a perfect touch for make something so professional, interest and useful for a lot of people.”</p>
+    </div>
+    <div class="testimonial-img">
+      <img src="images/im3.jpg" alt="Living Room">
+    </div>
+  </section>
+
+  <!-- Subscribe Section -->
+  <section class="subscribe-section">
+    <div class="subscribe-overlay">
+      <div class="subscribe-text">
+        <h2>Get more discount<br>Off your order</h2>
+        <p>Join our mailing list</p>
+        <div class="subscribe-form">
+          <input type="email" placeholder="Your email address" />
+          <button>Shop Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- <section class="subscribe-section">
+    <h2>Get more discount<br>Off your order</h2>
+    <p>Join our mailing list</p>
+    <div style="display:flex; flex-wrap: wrap;">
+      <input type="email" placeholder="Your email address" />
+      <button>Shop Now</button>
+    </div>
+  </section> -->
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-top">
+      <div>
+        <h4>Our Products</h4>
+        <ul>
+          <li>The Support Suite</li>
+          <li>The Sales Suite</li>
+          <li>Support</li>
+          <li>Guide</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Top Features</h4>
+        <ul>
+          <li>Ticketing System</li>
+          <li>Knowledge Base</li>
+          <li>Community Forums</li>
+          <li>Help Desk Software</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li>Product Support</li>
+          <li>Request Demo</li>
+          <li>Library</li>
+          <li>Peoplepower Blog</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li>About Us</li>
+          <li>Press</li>
+          <li>Investors</li>
+          <li>Events</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Favourite Things</h4>
+        <ul>
+          <li>For Enterprise</li>
+          <li>For Startups</li>
+          <li>For Benchmark</li>
+          <li>For Small Business</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>FurniShop</div>
+      <div class="social-icons">
+        <a href="#">⭑</a>
+        <a href="#">⭑</a>
+        <a href="#">⭑</a>
+        <a href="#">⭑</a>
+        <a href="#">⭑</a>
+      </div>
+    </div>
+    <p style="text-align:center; color:#aaa; margin-top:20px;">© NameBrand 2022 – All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
