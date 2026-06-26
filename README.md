@@ -18,3 +18,13 @@ A stylish furniture storefront showcasing products with details, designed using 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-View-0e5b4c?style=for-the-badge)](https://mm778877331-stack.github.io/furniture-store/)
 
 
+## 📬 Contact
+
+- Email: qwererrff@gmail.com
+- GitHub: [mm778877331-stack](https://github.com/mm778877331-stack)
+- LinkedIn: [Mohammad Al-Baou](https://www.linkedin.com/in/mohammed-tawfiq-9798903b3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app) 
+
+
+📜 License
+
+This project is for educational and occasional use only.
