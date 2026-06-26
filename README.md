@@ -3,25 +3,11 @@
 <p align="center">
 A stylish furniture storefront showcasing products with details, designed using only HTML and CSS.
 
-</p>
-
-<p align="center">
-<a href="#-technologies-used">Technologies</a> •
-<a href="#-features">Features</a> •
-<a href="#-live-demo">Live Demo</a> •
-<a href="#-contact">Contact</a>
-</p>
-
-<hr>
 
 ## 💻 Technologies Used
 
-<div  align="center">
-
 ![HTML](https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white)
-
-</div>
 
 
 ## ✨ Features
@@ -40,4 +26,3 @@ A stylish furniture storefront showcasing products with details, designed using 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-View-0e5b4c?style=for-the-badge)](https://mm778877331-stack.github.io/furniture-store/)
 
 
-## 📂 Project Structure
